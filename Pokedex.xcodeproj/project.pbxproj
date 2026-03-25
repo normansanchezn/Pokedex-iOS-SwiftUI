@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D2D284E62F733D1F00ABC106 /* pokemon_presentation in Frameworks */ = {isa = PBXBuildFile; productRef = D2D284E52F733D1F00ABC106 /* pokemon_presentation */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D2BD98872F7278F600D5B3AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D284E62F733D1F00ABC106 /* pokemon_presentation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = Pokedex;
 			packageProductDependencies = (
+				D2D284E52F733D1F00ABC106 /* pokemon_presentation */,
 			);
 			productName = Pokedex;
 			productReference = D2BD98772F7278F500D5B3AA /* Pokedex.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = D2BD986E2F7278F500D5B3AA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D2D284E42F733D1F00ABC106 /* XCLocalSwiftPackageReference "../pokemon_presentation" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D2BD98782F7278F500D5B3AA /* Products */;
 			projectDirPath = "";
@@ -615,6 +624,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		D2D284E42F733D1F00ABC106 /* XCLocalSwiftPackageReference "../pokemon_presentation" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../pokemon_presentation;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D2D284E52F733D1F00ABC106 /* pokemon_presentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = pokemon_presentation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D2BD986F2F7278F500D5B3AA /* Project object */;
 }

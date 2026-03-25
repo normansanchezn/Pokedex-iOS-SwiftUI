@@ -6,27 +6,15 @@
 //
 
 import SwiftUI
-import SwiftData
+import pokemon_presentation
 
 @main
 struct PokedexApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    private let dependencies = AppDIContainer.live()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(dependencies: dependencies)
         }
-        .modelContainer(sharedModelContainer)
     }
 }
