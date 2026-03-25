@@ -19,8 +19,8 @@ struct RootView: View {
     
     var body: some View {
         navigationStack {
-            HomeScreen(
-                viewModel: dependencies.homeViewModel,
+            MainScreen(
+                homeViewModel: dependencies.homeViewModel,
                 onEffect: router.handleOnSelectedPokemonEffect
             )
         }
