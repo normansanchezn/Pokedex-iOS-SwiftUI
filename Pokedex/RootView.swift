@@ -19,7 +19,10 @@ struct RootView: View {
     
     var body: some View {
         navigationStack {
-            HomeScreen()
+            HomeScreen(
+                viewModel: dependencies.homeViewModel,
+                onEffect: router.handleOnSelectedPokemonEffect
+            )
         }
     }
     

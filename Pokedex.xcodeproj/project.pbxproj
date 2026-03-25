@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D2D284E62F733D1F00ABC106 /* pokemon_presentation in Frameworks */ = {isa = PBXBuildFile; productRef = D2D284E52F733D1F00ABC106 /* pokemon_presentation */; };
+		D2D284E72F733D1F00ABC106 /* pokemon_domain in Frameworks */ = {isa = PBXBuildFile; productRef = D2D284E92F733D1F00ABC106 /* pokemon_domain */; };
+		D2D284E82F733D1F00ABC106 /* pokemon_data in Frameworks */ = {isa = PBXBuildFile; productRef = D2D284EA2F733D1F00ABC106 /* pokemon_data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D284E62F733D1F00ABC106 /* pokemon_presentation in Frameworks */,
+				D2D284E72F733D1F00ABC106 /* pokemon_domain in Frameworks */,
+				D2D284E82F733D1F00ABC106 /* pokemon_data in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +122,8 @@
 			name = Pokedex;
 			packageProductDependencies = (
 				D2D284E52F733D1F00ABC106 /* pokemon_presentation */,
+				D2D284E92F733D1F00ABC106 /* pokemon_domain */,
+				D2D284EA2F733D1F00ABC106 /* pokemon_data */,
 			);
 			productName = Pokedex;
 			productReference = D2BD98772F7278F500D5B3AA /* Pokedex.app */;
@@ -203,6 +209,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				D2D284E42F733D1F00ABC106 /* XCLocalSwiftPackageReference "../pokemon_presentation" */,
+				D2D284EB2F733D1F00ABC106 /* XCLocalSwiftPackageReference "../pokemon_domain" */,
+				D2D284EC2F733D1F00ABC106 /* XCLocalSwiftPackageReference "../pokemon_data" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D2BD98782F7278F500D5B3AA /* Products */;
@@ -630,12 +638,28 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../pokemon_presentation;
 		};
+		D2D284EB2F733D1F00ABC106 /* XCLocalSwiftPackageReference "../pokemon_domain" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../pokemon_domain;
+		};
+		D2D284EC2F733D1F00ABC106 /* XCLocalSwiftPackageReference "../pokemon_data" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../pokemon_data;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		D2D284E52F733D1F00ABC106 /* pokemon_presentation */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = pokemon_presentation;
+		};
+		D2D284E92F733D1F00ABC106 /* pokemon_domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = pokemon_domain;
+		};
+		D2D284EA2F733D1F00ABC106 /* pokemon_data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = pokemon_data;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
