@@ -12,9 +12,11 @@ import pokemon_presentation
 
 struct AppDIContainer {
     let fetchPokemonListUseCase: FetchPokemonListUseCase
+    let homeViewModel: HomeViewModel
 
-    var homeViewModel: HomeViewModel {
-        HomeViewModel(fetchPokemonListUseCase: fetchPokemonListUseCase)
+    init(fetchPokemonListUseCase: FetchPokemonListUseCase) {
+        self.fetchPokemonListUseCase = fetchPokemonListUseCase
+        self.homeViewModel = HomeViewModel(fetchPokemonListUseCase: fetchPokemonListUseCase)
     }
 
     static func live() -> AppDIContainer {
@@ -23,9 +25,5 @@ struct AppDIContainer {
         let fetchPokemonListUseCase = FetchPokemonListUseCaseImpl(pokemonRepository: pokemonRepository)
 
         return AppDIContainer(fetchPokemonListUseCase: fetchPokemonListUseCase)
-    }
-
-    init(fetchPokemonListUseCase: FetchPokemonListUseCase) {
-        self.fetchPokemonListUseCase = fetchPokemonListUseCase
     }
 }

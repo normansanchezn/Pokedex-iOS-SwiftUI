@@ -33,8 +33,7 @@ struct RootView: View {
                 .navigationDestination(for: AppRoute.self) { route in
                     switch route {
                     case .pokemonDetail(pokemon: let pokemon):
-                        //PokemonDetailView(pokemon)
-                        EmptyView()
+                        PokemonDetailsScreen(pokemon: pokemon)
                     }
                 }
         }
