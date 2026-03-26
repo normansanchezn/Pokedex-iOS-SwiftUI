@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import pokemon_design_system
 import pokemon_presentation
 
 struct RootView: View {
@@ -23,6 +24,7 @@ struct RootView: View {
                 homeViewModel: dependencies.homeViewModel,
                 onEffect: router.handleOnSelectedPokemonEffect
             )
+            .pokemonTheme(.shared)
         }
     }
     
@@ -32,12 +34,10 @@ struct RootView: View {
             content()
                 .navigationDestination(for: AppRoute.self) { route in
                     switch route {
-                    case .pokemonDetail(pokemon: let pokemon):
-                        PokemonDetailsScreen(pokemon: pokemon)
+                    case .pokemonDetail(pokemonID: let pokemonID):
+                        PokemonDetailsScreen(pokemonID: pokemonID, viewModel: dependencies.pokemonDetailsViewModel)
                     }
                 }
         }
     }
-    
-    
 }

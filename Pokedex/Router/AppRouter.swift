@@ -15,8 +15,8 @@ final class AppRouter {
     
     func handleOnSelectedPokemonEffect(_ effect: OnPokemonSelectedEffect) {
         switch effect {
-        case .pokemonSelected(pokemonSelected: let pokemon):
-            path.append(AppRoute.pokemonDetail(pokemon: pokemon))
+        case .pokemonSelected(pokemonIDSelected: let pokemonID):
+            path.append(AppRoute.pokemonDetail(pokemonID: pokemonID))
         }
     }
 }

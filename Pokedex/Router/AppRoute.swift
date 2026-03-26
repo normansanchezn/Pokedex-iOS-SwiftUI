@@ -8,5 +8,5 @@
 import pokemon_shared
 
 enum AppRoute: Hashable {
-    case pokemonDetail(pokemon: Pokemon)
+    case pokemonDetail(pokemonID: Int)
 }
