@@ -17,6 +17,13 @@ final class AppRouter {
         switch effect {
         case .pokemonSelected(pokemonIDSelected: let pokemonID):
             path.append(AppRoute.pokemonDetail(pokemonID: pokemonID))
+        case .goToSignUpView:
+            path.append(AppRoute.goToSignUpView)
         }
+    }
+
+    func pop() {
+        guard !path.isEmpty else { return }
+        path.removeLast()
     }
 }

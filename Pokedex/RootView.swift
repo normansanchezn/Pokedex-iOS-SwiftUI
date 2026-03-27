@@ -36,6 +36,11 @@ struct RootView: View {
                     switch route {
                     case .pokemonDetail(pokemonID: let pokemonID):
                         PokemonDetailsScreen(pokemonID: pokemonID, viewModel: dependencies.pokemonDetailsViewModel)
+                    case .goToSignUpView:
+                        SignUpScreen(viewModel: SignUpViewModel()) {
+                            dependencies.homeViewModel.setHasAccount(true)
+                            router.pop()
+                        }
                     }
                 }
         }
