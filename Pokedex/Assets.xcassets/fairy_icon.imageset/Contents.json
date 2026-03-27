@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "grass.svg",
+      "filename" : "fairy.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "grass 1.svg",
+      "filename" : "fairy 1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "grass 2.svg",
+      "filename" : "fairy 2.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
