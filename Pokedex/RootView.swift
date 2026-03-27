@@ -29,18 +29,21 @@ struct RootView: View {
     }
     
     @ViewBuilder
-    private func navigationStack<Content: View>(@ViewBuilder content: @escaping () -> Content) -> some View {
+    private func navigationStack<Content: View>(
+        @ViewBuilder content: @escaping () -> Content
+    ) -> some View {
         NavigationStack(path: $router.path) {
             content()
                 .navigationDestination(for: AppRoute.self) { route in
                     switch route {
                     case .pokemonDetail(pokemonID: let pokemonID):
-                        PokemonDetailsScreen(pokemonID: pokemonID, viewModel: dependencies.pokemonDetailsViewModel)
+                        PokemonDetailsScreen(
+                            pokemonID: pokemonID,
+                            viewModel: dependencies.pokemonDetailsViewModel
+                        )
                     case .goToSignUpView:
-                        SignUpScreen(viewModel: SignUpViewModel()) {
-                            dependencies.homeViewModel.setHasAccount(true)
-                            router.pop()
-                        }
+                        SignUpScreen(
+                            viewModel: SignUpViewModel())
                     }
                 }
         }
