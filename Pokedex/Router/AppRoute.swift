@@ -11,4 +11,5 @@ enum AppRoute: Hashable {
     case pokemonDetail(pokemonID: Int)
     case goToSignUpView
     case goToEmailScreen
+    case goToPasswordScreen
 }

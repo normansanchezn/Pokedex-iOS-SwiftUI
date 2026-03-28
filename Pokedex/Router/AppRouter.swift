@@ -19,6 +19,13 @@ final class AppRouter {
             path.append(AppRoute.goToEmailScreen)
         }
     }
+
+    func handleEmailEffects(_ effect: EmailViewModelEffects) {
+        switch effect {
+        case .goToPasswordScreen:
+            path.append(AppRoute.goToPasswordScreen)
+        }
+    }
     
     func handleOnSelectedPokemonEffect(_ effect: OnPokemonSelectedEffect) {
         switch effect {

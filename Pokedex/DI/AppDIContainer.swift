@@ -21,6 +21,7 @@ struct AppDIContainer {
     let homeViewModel: HomeViewModel
     let pokemonDetailsViewModel: PokemonDetailsViewModel
     let emailViewModel: EmailViewModel
+    let passwordViewModel: PasswordViewModel
 
     // MARK: - Init function
     init(
@@ -37,6 +38,7 @@ struct AppDIContainer {
         self.pokemonDetailsViewModel =
             PokemonDetailsViewModel(getPokemonDetailsUseCase: getPokemonDetailsUseCase)
         self.emailViewModel = EmailViewModel()
+        self.passwordViewModel = PasswordViewModel()
     }
 
     // MARK: - Go live App DI Container
@@ -71,4 +73,3 @@ struct AppDIContainer {
         )
     }
 }
-

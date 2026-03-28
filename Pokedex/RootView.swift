@@ -49,14 +49,19 @@ struct RootView: View {
                     case .goToEmailScreen:
                         EmailScreen(
                             viewModel: dependencies.emailViewModel,
-                            onEffect: handleEmailEffects
+                            onEffect: router.handleEmailEffects
+                        )
+                    case .goToPasswordScreen:
+                        PasswordScreen(
+                            viewModel: dependencies.passwordViewModel,
+                            onEffect: handlePasswordEffects
                         )
                     }
                 }
         }
     }
 
-    private func handleEmailEffects(_ effect: EmailViewModelEffects) {
+    private func handlePasswordEffects(_ effect: PasswordViewModelEffects) {
         switch effect {
         case .createAccount:
             dependencies.homeViewModel.setHasAccount(true)
