@@ -10,4 +10,5 @@ import pokemon_shared
 enum AppRoute: Hashable {
     case pokemonDetail(pokemonID: Int)
     case goToSignUpView
+    case goToEmailScreen
 }

@@ -13,6 +13,13 @@ import pokemon_shared
 final class AppRouter {
     var path = NavigationPath()
     
+    func handleSignUpEffects(_ effect: SignUpEffects) {
+        switch effect {
+        case .continueSignUp:
+            path.append(AppRoute.goToEmailScreen)
+        }
+    }
+    
     func handleOnSelectedPokemonEffect(_ effect: OnPokemonSelectedEffect) {
         switch effect {
         case .pokemonSelected(pokemonIDSelected: let pokemonID):
@@ -25,5 +32,9 @@ final class AppRouter {
     func pop() {
         guard !path.isEmpty else { return }
         path.removeLast()
+    }
+
+    func popToRoot() {
+        path = NavigationPath()
     }
 }

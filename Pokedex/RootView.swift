@@ -43,9 +43,24 @@ struct RootView: View {
                         )
                     case .goToSignUpView:
                         SignUpScreen(
-                            viewModel: SignUpViewModel())
+                            viewModel: SignUpViewModel(),
+                            onEffect: router.handleSignUpEffects
+                        )
+                    case .goToEmailScreen:
+                        EmailScreen(
+                            viewModel: dependencies.emailViewModel,
+                            onEffect: handleEmailEffects
+                        )
                     }
                 }
+        }
+    }
+
+    private func handleEmailEffects(_ effect: EmailViewModelEffects) {
+        switch effect {
+        case .createAccount:
+            dependencies.homeViewModel.setHasAccount(true)
+            router.popToRoot()
         }
     }
 }
